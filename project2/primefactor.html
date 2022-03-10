@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title> Check a number is Prime or not using JavaScript </title> 
+<script type="text/javascript">
+ 
+// Javascript program to print all prime factors 
+// A function to print all prime 
+// factors of a given number n 
+
+function primeFactors(n) 
+{ 
+
+    // Print the number of 2s that divide n 
+
+    while (n % 2 == 0) 
+
+    { 
+
+        document.write(2 + " "); 
+
+        n = Math.floor(n/2); 
+
+    } 
+ 
+
+    
+
+    for (let i = 3; i <= Math.sqrt(n); i = i + 2) 
+
+    { 
+	    while (n % i == 0) 
+
+        { 
+
+            document.write(i + " "); 
+
+            n = Math.floor(n/i); 
+
+        } 
+
+    } 
+
+    if (n > 2) 
+
+        document.write(n + " "); 
+} 
+   let n =60; 
+
+    primeFactors(n); 
+
+ 
+</script>
+</head>
+</html>
